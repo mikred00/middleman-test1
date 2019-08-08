@@ -13,10 +13,12 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+
 activate :directory_indexes
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
+page "/admin/*", :layout => "admin"
 
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
@@ -42,7 +44,10 @@ activate :directory_indexes
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+ configure :build do
+   activate :minify_css
+   activate :minify_javascript
+ end
+
+#Redirects 
+ redirect "my-old-path.html", to: "admin/login"

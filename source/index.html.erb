@@ -12,12 +12,24 @@ title: Welcome to Middleman
   <path class="middleman-logo__bottom-right-bar" fill="#fff" d="M200 340l200-40v-20l-200 30z"/>
 </svg>
 
-<h1>
-  Middleman is Running
-</h1>
+<h1 class="f2">Welcome</h1>
 
-<%= link_to(
-  "Read Documentation",
-  "https://middlemanapp.com/basics/templating_language/",
-  target: "_blank"
-) %>
+<div class="fl w-75 pa2">
+<div class="outline bg-white tc pv4">
+<%= link_to 'My Site admin', 'admin/login', :class => 'ba black-70 no-underline grow br2 b inline-flex items-center mr3 mb3 pv2 ph3', :query => { :foo => 'bar' }, :fragment => 'deep'%><br />
+<ul>
+  <% 5.times do |num| %>
+    <li>Count <%= num %></li>
+  <% end %>
+</ul>
+<%= lorem.sentences 5 %>
+<p>A tachyon /ˈtæki.ɒn/ or tachyonic particle is a hypothetical particle that always moves faster than light. The word comes from the Greek:
+<br />
+ταχύς or tachys, meaning “swift, quick, fast, rapid”</p>
+</div>
+</div>
+<div class="fl w-25 pa2">
+<div class="outline bg-white tc pv4 truncate no-wrap"><img src="<%= lorem.image('300x400', :random_color => true) %>"></div>
+</div>
+
+
