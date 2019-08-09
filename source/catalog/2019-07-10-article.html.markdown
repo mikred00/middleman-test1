@@ -1,0 +1,11 @@
+---
+title: My Middleman Blog Post
+date: 2019-07-10
+tags: example, locomad
+thumbnail_image: images/catalog/forum-logo.png
+cover_image: images/catalog/bg-bici-murales.jpg
+---
+
+<h2>This is a World</h2>
+<img src="../../../../../images/catalog/bg-bici-murales.jpg" width="700"><br />
+Middleman supports article truncation for cases when you'd like to show an article summary with a link to the article's permalink page, such as on the homepage. The blogging extension looks for the string READMORE in your article body and shows only the content before this text on the homepage. On the permalink page, this data is then stripped out.

@@ -11,7 +11,7 @@
     <%= javascript_include_tag "site" %>
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
   </head>
-  <body>
+  <body id="<%= "blog" if current_page.url == "/blog/" %>">
     <%= partial "header" unless current_page.url == "/" %>
     <%= yield %>
 

@@ -24,6 +24,7 @@ page "/admin/login.html", layout: :admin
 ###
 
 activate :blog do |blog|
+   blog.name = "blog"
   # This will add a prefix to all links, template references and source paths
    blog.prefix = "blog"
 
@@ -48,6 +49,11 @@ activate :blog do |blog|
   # blog.page_link = "page/{num}"
 end
 
+activate :blog do |blog|
+  blog.name = "catalog"
+  blog.prefix = "catalog"
+end
+
 page "/feed.xml", layout: false
 # Reload the browser automatically whenever files change
 # configure :development do
@@ -64,8 +70,10 @@ page "/feed.xml", layout: false
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  # activate :minify_css
+   activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+   activate :minify_javascript
+
+   config[:host] = "http://www.example.com" 
 end
