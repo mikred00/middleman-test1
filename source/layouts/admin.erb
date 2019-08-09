@@ -3,9 +3,10 @@
   <head>
     <title>Admin Area</title>
     <%= stylesheet_link_tag "site" %>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
   </head>
   <body>
-    <a href="/">Back home</a>
+    <a href="/" class="link underline blue hover-orange">Back home</a>
     <%= yield %>
     <%= partial "footer" %>
   </body>

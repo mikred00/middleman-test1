@@ -1,52 +1,21 @@
----
-pageable: true
-per_page: 1
----
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
+<h1 class="f2">Welcome</h1>
 
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
-
-<% page_articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <%= article.body %>
-<% end %>
-
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
-
-<h2>Tags</h2>
+<div class="fl w-75 pa2">
+<div class="outline bg-white tc pv4">
+<%= link_to 'My Site admin', 'admin/login', :class => 'ba black-70 no-underline grow br2 b inline-flex items-center mr3 mb3 pv2 ph3', :query => { :foo => 'bar' }, :fragment => 'deep'%>
+<%= link_to 'Blog', 'blog', :class => 'ba black-70 no-underline grow br2 b inline-flex items-center mr3 mb3 pv2 ph3' %>
+<br />
 <ul>
-  <% blog.tags.each do |tag, articles| %>
-    <li>
-      <h5><%= tag %></h5>
-      <ul>
-        <% articles.each do |article| %>
-          <li><a href="<%= article.url %>"><%= article.title %></a></li>
-        <% end %>
-      </ul>
-    </li>
+  <% 5.times do |num| %>
+    <li>Count <%= num %></li>
   <% end %>
 </ul>
-
-<h2>Calendar</h2>
-<ul>
-  <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-    <li>
-      <h5><%= year %></h5>
-      <ul>
-        <% articles.each do |article| %>
-          <li><a href="<%= article.url %>"><%= article.title %></a></li>
-        <% end %>
-      </ul>
-    </li>
-  <% end %>
-</ul>
+<%= lorem.sentences 5 %>
+<p>A tachyon /ˈtæki.ɒn/ or tachyonic particle is a hypothetical particle that always moves faster than light. The word comes from the Greek:
+<br />
+ταχύς or tachys, meaning “swift, quick, fast, rapid”</p>
+</div>
+</div>
+<div class="fl w-25 pa2">
+<div class="outline bg-white tc pv4 truncate no-wrap"><img src="<%= lorem.image('300x400', :random_color => true) %>"></div>
+</div>

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
   </head>
   <body>
+    <%= partial "header" unless current_page.url == "/" %>
     <%= yield %>
 
     <%= partial(:paypal_donate_button, :locals => { :amount => 2, :amount_text => "Pay $2" }) %>
