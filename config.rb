@@ -54,6 +54,15 @@ activate :blog do |blog|
   blog.prefix = "catalog"
 end
 
+["tom", "dick", "harry"].each do |name|
+  proxy "/about/#{name}.html", "/about/template.html", :locals => { :person_name => name }#, :ignore => true
+end
+
+=begin
+data.work.projects.each do |project|
+  proxy "/#{project.slug}.html", "/project.html", :locals => { :project => project }, :ignore => true
+=end
+
 page "/feed.xml", layout: false
 # Reload the browser automatically whenever files change
 # configure :development do

@@ -1,0 +1,20 @@
+
+<h1>About <%= person_name.capitalize %></h1>
+<div class="fl w-25 pa2">
+<div class="outline bg-white tl ph6 pv2 truncate no-wrap">
+<h2>Friends</h2>
+<ol>
+  <% data.people.friends.each do |f| %>
+  <li><a href="/about/<%= f.downcase %>/"><%= f %></a></li>
+  <% end %>
+</ol>
+</div>
+</div>
+<div class="fl w-75 pa2">
+<div class="outline bg-white tc pv4 ph5">
+<%= lorem.date %>
+<% info = "Author: " + lorem.first_name + " " + lorem.last_name + " - <a href=\"mailto:" + lorem.email + "\">" + lorem.email + "</a>" %>
+<p><%= info %></p>
+<%= lorem.paragraphs 10 %>
+</div>
+</div>
