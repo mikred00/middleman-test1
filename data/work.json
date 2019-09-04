@@ -1,0 +1,17 @@
+{
+    "projects": [
+      {
+        "slug" : "project-one",
+        "title" : "project one",
+        "meta_description" : "meta description for project one",
+        "text" : "1 - What I ended up doing was creating a new layout file specific to my content, let's call them projects. Inside the projects layout, I was able to directly reference the local data variable and skip defining page specific, dynamic frontmatter.",
+        "image" : "images/catalog/bg-bici-murales.jpg"
+      },
+      {
+        "slug" : "project-two",
+        "title" : "project two",
+        "meta_description" : "meta description for project two",
+        "text" : "2 - What I ended up doing was creating a new layout file specific to my content, let's call them projects. Inside the projects layout, I was able to directly reference the local data variable and skip defining page specific, dynamic frontmatter."
+      }      
+    ]
+  }

@@ -59,10 +59,9 @@ end
   proxy "/about/#{name}.html", "/about/template.html", :locals => { :person_name => name }#, :ignore => true
 end
 
-=begin
 data.work.projects.each do |project|
-  proxy "/#{project.slug}.html", "/project.html", :locals => { :project => project }, :ignore => true
-=end
+  proxy "/work/#{project.slug}.html", "/work/project.html", :locals => { :project => project }, :ignore => true
+end
 
 page "/feed.xml", layout: false
 # Reload the browser automatically whenever files change

@@ -1,0 +1,26 @@
+---
+layout: "projects"
+---
+
+<h1>Project <%=  project['title'] if defined?(project['title']) %></h1>
+<div class="fl w-25 pa2">
+<div class="outline bg-white tl ph6 pv2 truncate no-wrap">
+<h2>Works</h2>
+<ol>
+  <% data.work.projects.each do |project| %>
+  <li><a href="/work/<%= project.slug %>.html"><%= project.title %></a></li>
+  <% end %>
+</ol>
+</div>
+</div>
+<div class="fl w-75 pa2">
+<div class="outline bg-white tc pv4 ph5">
+<%= lorem.date %>
+<% info = "Author: " + lorem.first_name + " " + lorem.last_name + " - <a href=\"mailto:" + lorem.email + "\">" + lorem.email + "</a>" %>
+<p><%= info %></p>
+<%= project['text'] %>
+<% if defined?(project['image']) %>
+ <%= "<p><img src=\"../" + project['image']+ "\" alt=\"" + project['title'] + "\" width=\"400\"></p>" %>
+<% end %>
+</div>
+</div>
