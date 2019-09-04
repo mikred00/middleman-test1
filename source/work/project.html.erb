@@ -19,7 +19,7 @@ layout: "projects"
 <% info = "Author: " + lorem.first_name + " " + lorem.last_name + " - <a href=\"mailto:" + lorem.email + "\">" + lorem.email + "</a>" %>
 <p><%= info %></p>
 <%= project['text'] %>
-<% if defined?(project['image']) %>
+<% unless project['image'].nil? %>
  <%= "<p><img src=\"../" + project['image']+ "\" alt=\"" + project['title'] + "\" width=\"400\"></p>" %>
 <% end %>
 </div>

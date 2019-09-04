@@ -50,10 +50,14 @@ activate :blog do |blog|
 end
 
 #fix 2 blogs http://billyfung.com/blog/2017/01/middleman-blogs/
+=begin
+=end
 activate :blog do |blog|
   blog.name = "catalog"
   blog.prefix = "catalog"
 end
+
+
 
 ["tom", "dick", "harry"].each do |name|
   proxy "/about/#{name}.html", "/about/template.html", :locals => { :person_name => name }#, :ignore => true
