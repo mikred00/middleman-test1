@@ -24,9 +24,9 @@ page "/admin/login.html", layout: :admin
 ###
 
 activate :blog do |blog|
-   blog.name = "blog"
+   blog.name = "myblog"
   # This will add a prefix to all links, template references and source paths
-   blog.prefix = "blog"
+   blog.prefix = "myblog"
 
   # blog.permalink = "{year}/{month}/{day}/{title}.html"
   # Matcher for blog source files
@@ -49,6 +49,7 @@ activate :blog do |blog|
   # blog.page_link = "page/{num}"
 end
 
+#fix 2 blogs http://billyfung.com/blog/2017/01/middleman-blogs/
 activate :blog do |blog|
   blog.name = "catalog"
   blog.prefix = "catalog"
