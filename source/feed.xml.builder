@@ -3,10 +3,10 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
   site_url = "http://blog.url.com/"
   xml.title "Blog Name"
   xml.subtitle "Blog subtitle"
-  xml.id URI.join(site_url, blog.options.prefix.to_s)
-  xml.link "href" => URI.join(site_url, blog.options.prefix.to_s)
+  xml.id URI.join(site_url, blog('myblog').options.prefix.to_s)
+  xml.link "href" => URI.join(site_url, blog('myblog').options.prefix.to_s)
   xml.link "href" => URI.join(site_url, current_page.path), "rel" => "self"
-  xml.updated(blog.articles.first.date.to_time.iso8601) unless blog.articles.empty?
+  xml.updated(blog('myblog').articles.first.date.to_time.iso8601) unless blog('myblog').articles.empty?
   xml.author { xml.name "Blog Author" }
 
   blog('myblog').articles[0..5].each do |article|
