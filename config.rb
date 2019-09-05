@@ -11,6 +11,8 @@ page '/*.txt', layout: false
 
 activate :directory_indexes
 activate :i18n
+activate :asset_hash
+activate :minify_html
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout

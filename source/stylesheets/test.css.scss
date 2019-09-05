@@ -1,1 +1,3 @@
-#blog{background-color: #eee !important;}
+$bg-color: #eee;
+
+#blog{background-color:$bg-color !important;}

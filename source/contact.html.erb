@@ -1,0 +1,74 @@
+<h1>Contact us</h1>
+<form class="gform pa4 black-80 tl" method="post" action="https://script.google.com/macros/s/AKfycbyv0UjnotVkphub_45qHnJKeHtSRBviNvY_PQWY2A/exec">
+<fieldset id="contact" class="ba b--transparent ph0 mh0 form-elements">
+<div class="mt3 ">
+<label for="name" class="f6 b db mb2">Name <span class="normal black-60">*</span></label>
+<input id="name" class="input-reset ba b--black-20 pa2 mb2 db w-100 measure" type="text" aria-describedby="name" name="name">
+<small id="name-desc" class="f6 black-60 db mb2">Helper text for the form control.</small>
+</div>
+<div class="mt3">
+<label for="email" class="f6 b db mb2">Email <span class="normal black-60">*</span></label>
+<input id="name" class="input-reset ba b--black-20 pa2 mb2 db w-100 measure" type="email" aria-describedby="email" name="email">
+<small id="name-desc" class="f6 black-60 db mb2">Helper text for the form control.</small>
+</div>
+<div class="mt3">
+<label for="message" class="f6 b db mb2">Message <span class="normal black-60">(*)</span></label>
+<textarea id="comment" name="message" class="db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2" aria-describedby="comment-desc"></textarea>
+<small id="comment-desc" class="f6 black-60">Helper text for a form control. Can use this text to <a href="#" class="link underline black-80 hover-blue">link to more info.</a></small>
+</div>
+<div class="mt3">
+<legend class="fw7 mb2">Favorite Movies</legend>
+<div class="flex items-center mb2">
+  <input class="mr2" type="checkbox" id="spacejam" value="spacejam" name="color">
+  <label for="spacejam" class="lh-copy">Space Jam</label>
+</div>
+<div class="flex items-center mb2">
+  <input class="mr2" type="checkbox" id="airbud" value="airbud" name="color">
+  <label for="airbud" class="lh-copy">Air Bud</label>
+</div>
+<div class="flex items-center mb2">
+  <input class="mr2" type="checkbox" id="hocuspocus" value="hocuspocus" name="color">
+  <label for="hocuspocus" class="lh-copy">Hocus Pocus</label>
+</div>
+<div class="flex items-center mb2">
+  <input class="mr2" type="checkbox" id="diehard" value="diehard" name="color">
+  <label for="diehard" class="lh-copy">Die Hard</label>
+</div>
+<div class="flex items-center mb2">
+  <input class="mr2" type="checkbox" id="primer" value="primer" name="color">
+  <label for="primer" class="lh-copy">Primer</label>
+</div>
+<div class="flex items-center mb2">
+  <input class="mr2" type="checkbox" id="proxy" value="proxy" name="color">
+  <label for="proxy" class="lh-copy">Hudsucker Proxy</label>
+</div>
+<div class="flex items-center mb2">
+  <input class="mr2" type="checkbox" id="homealone" value="homealone" name="color">
+  <label for="homealone" class="lh-copy">Home Alone</label>
+</div>
+</div>
+<div class="mt3"><input class="b ph3 pv2 input-reset ba b--white white bg-green grow pointer f6" type="submit" value="Submit"></div>
+</fieldset>
+
+<div style="display:none" class="thankyou_message">
+ <!-- You can customize the thankyou message by editing the code below -->
+ <h2><em>Thanks</em> for contacting us! We will get back to you soon!
+ </h2>
+</div>
+</form>
+<%= javascript_include_tag "form-submission-handler.js" %>
+
+<% 
+#//interesting send mail from static pages
+# Harder Way
+#  You have to implement server code to send a mail
+# Less Harder Way
+#  You have to use mailgun or sendgrid rest api to send a mail using javascript. https://elasticemail.com/transactional/ https://www.mailgun.com/pricing
+# Simpler Way
+# You have to use https://formspree.io/ to send a mail from your HTML. (potential SPAM)
+#***
+# Update: Recently I found a way to send email using Google script. You don't need the backend. 
+# Explained here https://github.com/dwyl/html-form-send-email-via-google-script-without-server
+#
+#//--
+%>

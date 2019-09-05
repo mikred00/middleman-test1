@@ -1,12 +1,13 @@
 <h1 class="f2">Welcome</h1>
 
-<div class="fl w-75 pa2">
+<div class="fl w-75-l w-100-ns pa2">
 <div class="outline bg-white tc pv4">
 <%= link_to 'My Site admin', 'admin/login', :class => 'ba black-70 no-underline grow br2 b inline-flex items-center mr3 mb3 pv2 ph3', :query => { :foo => 'bar' }, :fragment => 'deep'%>
 <%= link_to 'Blog', 'myblog', :class => 'ba black-70 no-underline grow br2 b inline-flex items-center mr3 mb3 pv2 ph3' %>
 <%= link_to 'Catalog', 'catalog', :class => 'ba black-70 no-underline grow br2 b inline-flex items-center mr3 mb3 pv2 ph3' %>
 <%= link_to 'Works', '/work/project-one.html', :class => 'ba black-70 no-underline grow br2 b inline-flex items-center mr3 mb3 pv2 ph3' %>
 <%= link_to 'About', 'about/template', :class => 'ba black-70 no-underline grow br2 b inline-flex items-center mr3 mb3 pv2 ph3' %>
+<%= link_to 'Contact us', 'contact', :class => 'ba black-70 no-underline grow br2 b inline-flex items-center mr3 mb3 pv2 ph3' %>
 <br />
 <ul>
   <% 5.times do |num| %>
@@ -21,6 +22,8 @@
 
 </div>
 </div>
-<div class="fl w-25 pa2">
-<div class="outline bg-white tc pv4 truncate no-wrap"><img src="<%= lorem.image('300x400', :random_color => true) %>"></div>
+<div class="fl w-25-l w-100-ns pa2">
+<div class="outline bg-white tc pv4 truncate no-wrap"><img src="https://picsum.photos/200/300">
+<% #lorem.image('300x400', :random_color => true) %>
+</div>
 </div>
