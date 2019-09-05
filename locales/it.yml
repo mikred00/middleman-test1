@@ -1,0 +1,5 @@
+---
+it:
+  hello: "Ciao"
+  paths:
+    hello: "hola"  
